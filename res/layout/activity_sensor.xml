@@ -1,0 +1,296 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".SensorActivity" >
+
+    <TableLayout
+        android:id="@+id/table_cab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_reset"
+            android:textColor="@drawable/blue"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/cab_1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/str_calibration"
+            android:visibility="gone"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/examine"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="@string/examine"
+            android:textSize="40sp"
+            android:visibility="gone" />
+
+        <TableLayout
+            android:id="@+id/tableLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/table2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <!--
+                     CheckBox
+                    android:id="@+id/CheckBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/str_open_button"
+                    android:visibility="gone" /
+                -->
+
+                <Button
+                    android:id="@+id/delay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="@string/str_delay"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/accurate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_set_accurate" 
+                    android:visibility="gone"/>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/table3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_accurate_info"
+                    android:layout_width="300dip"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_accurate_info"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_accurate_value"
+                    android:layout_width="200dip"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="20sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/blank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@drawable/red"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/information"
+            android:textColor="@drawable/red"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/blank2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@drawable/red"
+            android:textSize="20sp" />
+
+        <TableLayout
+            android:id="@+id/table_accelerometer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/table_acc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/accelerometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/str_acc"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/accelerometer_x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/red"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/accelerometer_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/red"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/accelerometer_z"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/red"
+                    android:textSize="24sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/table_accelerometer_offset"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/table_acc_offset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/offset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/str_acc_offset"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/acc_offset_x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/red"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/acc_offset_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/red"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/acc_offset_z"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/red"
+                    android:textSize="24sp" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/table_accelerometer_sigma"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/table_acc_sigma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <!--TextView
+                    android:id="@+id/acc_sigma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/str_acc_sigma"
+                    android:textColor="@drawable/black"
+                    android:textSize="20sp" /-->
+
+                <TextView
+                    android:id="@+id/acc_sigma_x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textColor="@drawable/red"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/acc_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/red"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/acc_sigma_z"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@drawable/red"
+                    android:textSize="24sp" />
+            </TableRow>
+        </TableLayout>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/acc_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_Pass"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnPassText" />
+
+        <Button
+            android:id="@+id/btn_Fail"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnFailText" />
+
+        <Button
+            android:id="@+id/btn_Skip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnSkipText" />
+
+        <Button
+            android:id="@+id/btn_Retest"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnRetestText" />
+    </LinearLayout>
+
+</RelativeLayout>

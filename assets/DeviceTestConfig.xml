@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseList>
+<!--<TestCase class_name="GsensorActivity" test_group="TEST ALL" first_test="yc">Gsensor</TestCase>-->
+<TestCase class_name="GsensorAngleTestActivity" test_group="TEST ALL" first_test="yc">Gsensor Angle</TestCase>
+	<TestCase class_name="LcdTestActivity" test_group="TEST ALL" first_test="yc">LCD</TestCase>
+	<TestCase class_name="CameraTestActivity" test_group="TEST ALL" first_test="yc">Camera</TestCase>
+	<!-- <TestCase class_name="GsensorTestActivity" test_group="TEST ALL" first_test="yc">Gsensor</TestCase>  -->
+	
+	
+	<TestCase class_name="BluetoothTestActivity" test_group="TEST ALL" first_test="yc">Bluetooth</TestCase>
+	<TestCase class_name="WifiTestActivity" test_group="TEST ALL" first_test="yc">Wifi</TestCase>
+	<TestCase class_name="BrightnessTestActivity" test_group="TEST ALL" first_test="yc">Brightness</TestCase>
+	
+	<TestCase class_name="LedTestActivity" test_group="TEST ALL" first_test="yc">LED</TestCase>
+      <!--  <TestCase class_name="PowerTestActivity" test_group="TEST ALL" first_test="yc">DCAC</TestCase> -->
+	<TestCase class_name="TouchPanelTestActivity" test_group="TEST ALL" first_test="yc">TouchPanel</TestCase>
+	
+	<TestCase class_name="TouchPadTestActivity" test_group="TEST ALL" first_test="yc">TouchPad</TestCase>
+    <!-- <TestCase class_name="SpeakerTestActivity" test_group="TEST ALL" first_test="yc">Speaker</TestCase> -->
+    <TestCase class_name="SpeakerTestActivityForLenovo" test_group="TEST ALL" first_test="yc">Speaker</TestCase>
+	<!-- <TestCase class_name="PhoneMicTestActivity" test_group="TEST ALL" first_test="yc">MIC</TestCase> -->
+	<TestCase class_name="PhoneMicTestActivityForLenovo" test_group="TEST ALL" first_test="yc">MIC</TestCase>
+	<TestCase class_name="LIDTestActivity" test_group="TEST ALL" first_test="yc">LID</TestCase>
+	
+	<TestCase class_name="KeyboardHardwareTestActivity" test_group="TEST ALL" first_test="yc">Keyboard</TestCase>
+	<TestCase class_name="MrioUSBTestActivity" test_group="TEST ALL" first_test="yc">USB</TestCase>
+	<TestCase class_name="SdCardTestActivity" test_group="TEST ALL" first_test="yc">SD Card</TestCase>
+	
+    	<TestCase class_name="HdmiTestActivity" test_group="TEST ALL" first_test="yc">HDMI</TestCase>
+
+	<!-- <TestCase class_name="HeadsetSpeakerTestActivity" test_group="TEST ALL" first_test="yc">Headset Speaker</TestCase> -->
+	<TestCase class_name="HeadsetSpeakerTestActivityForLenovo" test_group="TEST ALL" first_test="yc">Headset Speaker</TestCase>
+	<!-- <TestCase class_name="HeadsetMicTestActivity" test_group="TEST ALL" first_test="yc">Headset MIC</TestCase> -->
+	<TestCase class_name="HeadsetMicTestActivityForLenovo" test_group="TEST ALL" first_test="yc">Headset MIC</TestCase>
+
+	
+	
+	
+	
+	 
+	<!-- <TestCase class_name="UsbHostTestActivity" test_group="TEST ALL">UsbHost</TestCase> -->
+	<!--<TestCase class_name="TouchTestActivity" test_group="TEST ALL" first_test="yc">Touch</TestCase>-->
+	<!-- TestCase class_name="GpsLocationTestActivity" test_group="TEST 2">GPS Location</TestCase> -->
+	<!-- <TestCase class_name="MrioUSBTestActivity" test_group="TEST 2">Mrio USB</TestCase> -->
+	<!-- <TestCase class_name="StorageActivity" test_group="TEST ALL" first_test="yc">Storage</TestCase> -->
+	<!-- <TestCase class_name="CompassTestActivity" test_group="TEST 3">Compass</TestCase> -->
+	<!--<TestCase class_name="LevelTestActivity" test_group="rest">Level</TestCase> -->
+	<!-- <TestCase class_name="MsensorTestActivity" test_group="rest">Msensor</TestCase> -->
+	<!-- <TestCase class_name="LightsensorTestActivity" test_group="rest">Lightsensor</TestCase> -->
+	<!-- <TestCase class_name="SimCardTestActivity" test_group="rest">Sim Card</TestCase> -->
+	<!-- <TestCase class_name="FMRadioTestActivity" test_group="rest">FM Radio</TestCase> -->
+	<!--<TestCase class_name="CirTestActivity" test_group="TEST 1">Cir</TestCase>
+	<TestCase class_name="IrdaTestActivity" test_group="TEST 1">IrDA</TestCase> -->
+	<!-- <TestCase class_name="CompassTestActivity" test_group="TEST 3">Compass</TestCase> -->
+	<!-- <TestCase class_name="RuninTestActivity" test_group="RunIn">Runin</TestCase> -->
+	<!-- <TestCase class_name="VibrationTestActivity" test_group="TEST ALL" first_test="yc">Vibration</TestCase> -->
+	<!-- <TestCase class_name="HardwareInfoTestActivity" test_group="TEST AUTO">Hardware</TestCase> -->
+	<!--  <TestCase class_name="KeyboardTestActivity" test_group="TEST ALL" first_test="yc">Keyboard</TestCase> -->
+	<!-- <TestCase class_name="GpsTestActivity" test_group="TEST ALL" first_test="yc">GPS</TestCase> -->
+	<!-- <TestCase class_name="StorageTestActivity" test_group="TEST AUTO">Storage R/W</TestCase> -->
+	<!--	<TestCase class_name="KeyboardTestActivity" test_group="TEST ALL" first_test="yc">Special Keyboard</TestCase>
+	<TestCase class_name="VersionTestActivity" test_group="TEST ALL" first_test="yc">Version</TestCase>
+	<TestCase class_name="InfomationActivity" test_group="TEST ALL" first_test="yc">Infomation</TestCase> -->
+</TestCaseList>

@@ -1,0 +1,202 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompareServerInfoActivity" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/result_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/btnPassText"
+            android:textSize="20sp"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:id="@+id/ScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/server"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/server_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/server_title"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/server_EC_VER"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/server_PRODUCT"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/server_HDD"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/server_BID"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/server_DDR"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/server_CPU"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/server_CAMERA_ID"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/server_TOUCHPANEL_ID"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/server_WLAN_ID"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/server_LCD_ID"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/server_BATTERY_CELL"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/server_TOUCHPAD_ID"
+                        style="@style/info_label" />
+                      <TextView
+                        android:id="@+id/server_build_num"
+                        style="@style/info_label" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/client"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/client_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/client_title"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/client_EC_VER"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/client_PRODUCT"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/client_HDD"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/client_BID"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/client_DDR"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/client_CPU"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/client_CAMERA_ID"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/client_TOUCHPANEL_ID"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/client_WLAN_ID"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/client_LCD_ID"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/client_BATTERY_CELL"
+                        style="@style/info_label" />
+
+                    <TextView
+                        android:id="@+id/client_TOUCHPAD_ID"
+                        style="@style/info_label" />
+                     <TextView
+                        android:id="@+id/client_build_num"
+                        style="@style/info_label" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/result_bt_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_Pass"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:focusable="true"
+            android:text="@string/btnPassText" />
+      
+        <Button
+                android:id="@+id/btn_Retest"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnRetestText" />
+        
+
+        <Button
+            android:id="@+id/btn_Fail"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:focusable="true"
+            android:text="@string/btnFailText" />
+    </LinearLayout>
+
+</RelativeLayout>

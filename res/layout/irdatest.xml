@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout1"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView android:id="@+id/IrdaTest" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_alignParentTop="true"
+		android:gravity="center_horizontal" android:paddingBottom="20px"
+		android:textSize="24sp" android:visibility="visible" android:text="@string/IrdaTestTitle" />
+
+	<LinearLayout android:id="@+id/irda_btns"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:orientation="horizontal" android:layout_alignParentBottom="true">
+
+		<Button android:id="@+id/btn_Pass" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+
+			android:text="@string/btnPassText" />
+
+		<Button android:id="@+id/btn_Fail" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/btnFailText" />
+		<Button android:id="@+id/btn_Skip" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/btnSkipText" />
+	</LinearLayout>
+
+	<LinearLayout android:layout_above="@id/irda_btns"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal">
+			<Button android:id="@+id/sir_send" android:layout_width="0dip"
+				android:layout_weight="1" android:layout_height="wrap_content"
+				android:text="@string/SirSend"  android:textSize="30sp"/>
+			<Button android:id="@+id/sir_receive" android:layout_width="0dip"
+				android:layout_weight="1" android:layout_height="wrap_content"
+				android:text="@string/SirReceive"  android:textSize="30sp"/>
+
+		</LinearLayout>
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal">
+			<Button android:id="@+id/fir_send" android:layout_width="0dip"
+				android:layout_weight="1" android:layout_height="wrap_content"
+				android:text="@string/FirSend"  android:textSize="30sp"/>
+			<Button android:id="@+id/fir_receive" android:layout_width="0dip"
+				android:layout_weight="1" android:layout_height="wrap_content"
+				android:text="@string/FirReceive" android:textSize="30sp"/>
+
+		</LinearLayout>
+		<ProgressBar android:id="@+id/irda_progress"
+			android:visibility="invisible" android:layout_width="wrap_content"
+			android:paddingTop="20px" android:layout_height="wrap_content"
+			android:layout_gravity="center"></ProgressBar>
+
+	</LinearLayout>
+
+</RelativeLayout>

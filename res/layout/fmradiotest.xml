@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+>
+  <TextView
+	android:id="@+id/FMRadioTestId"
+	android:visibility="visible"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center_horizontal"
+	android:textSize="24sp"
+	android:text="@string/FMRadioTestTitle"
+	android:paddingTop = "20px"/>
+
+  <LinearLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom= "60dip"  
+    android:layout_below="@id/FMRadioTestId"> 
+    
+    <TextView
+        android:id="@+id/FMRadioTextMsgID"
+	    android:visibility="visible"
+	    android:layout_height="wrap_content"
+	    android:text="@string/FMRadioTextMsgText"
+	    android:layout_width="fill_parent"
+	    android:gravity="center_horizontal"
+	    android:paddingTop = "40px"/>
+			
+    <TextView
+        android:id="@+id/FMRadioTestResult"
+		android:visibility="invisible"
+		android:layout_height="wrap_content"
+		android:text="@string/OKText"
+		android:layout_width="fill_parent"
+		android:gravity="center_horizontal"
+		android:paddingTop = "40px"/>
+	  
+
+  </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+    >   
+ 
+        <Button android:id="@+id/btn_Pass"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+           
+             android:text="@string/btnPassText"
+        />
+
+        <Button android:id="@+id/btn_Fail"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+             android:text="@string/btnFailText"
+        />
+         <Button android:id="@+id/btn_Skip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+             android:text="@string/btnSkipText"
+        />
+    </LinearLayout>
+    
+</RelativeLayout>

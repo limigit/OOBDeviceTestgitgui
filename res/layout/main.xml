@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout1"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout android:id="@+id/btnLayout"
+	  
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:orientation="horizontal"   android:layout_alignParentTop="true" >
+		<Spinner android:id="@+id/GroupTestSpinner"
+		    android:visibility="gone"
+			android:layout_width="0dip" android:layout_height="wrap_content"
+			android:layout_weight="2" />
+
+		<Button android:id="@+id/btn_testall" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/testall" />
+		<Button android:id="@+id/btn_cancel" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/Cancel" />
+
+		<Button android:id="@+id/btn_clear" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/Clear" />
+			
+		<Button android:id="@+id/btn_uninstall" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/Uninstall" />
+		
+		<Button android:id="@+id/btn_send" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/Send" />
+		
+		<Button android:id="@+id/btn_reset" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/Recovery" />
+		
+	</LinearLayout>
+
+<LinearLayout 
+		android:id="@+id/GVLayout" android:layout_below="@id/btnLayout"
+	  android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<com.OOBDeviceTest.view.MyGridView
+			android:id="@+id/myGridView" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" />
+	</LinearLayout>
+</RelativeLayout>

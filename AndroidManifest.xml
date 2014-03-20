@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.OOBDeviceTest"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="1"
+    android:versionName="1.2" >
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.HARDWARE_TEST" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.INJECT_EVENTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <!-- android:icon="@drawable/devicetest_icon" -->
+    <application android:label="@string/app_name" >
+        <activity
+            android:name=".TestSelectActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+
+            <!--
+                 <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+               <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".FirstRun"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DeviceTest"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize"
+            android:excludeFromRecents="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+
+           <!--
+                 <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                 android:configChanges="orientation|screenSize|keyboardHidden"
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+           -->
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICETEST" />
+                  android:configChanges="orientation|screenSize|keyboardHidden"
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".VersionTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.VersionTestActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StorageActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.StorageActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LcdTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.LcdTestActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TouchTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.TouchTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CameraTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.CameraTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".VibrationTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VibrationTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SpeakerTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.SpeakerTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".SpeakerTestActivityForLenovo"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.SpeakerTestActivityForLenovo"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>        
+        
+        <activity
+            android:name=".GsensorTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.GsensorTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- limi 8.27 -->
+          <activity
+            android:name=".GsensorAngleTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.GsensorAngleTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- limi 8.27 -->
+        <activity
+            android:name=".GsensorActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.GsensorActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MsensorTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MsensorTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LightsensorTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.LightsensorTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BluetoothTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BluetoothTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WifiTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.WifiTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HeadsetMicTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.HeadsetMicTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		
+		<activity
+            android:name=".HeadsetMicTestActivityForLenovo"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.HeadsetMicTestActivityForLenovo"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".HeadsetSpeakerTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.HeadsetSpeakerTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".HeadsetSpeakerTestActivityForLenovo"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.HeadsetSpeakerTestActivityForLenovo"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".PhoneMicTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.PhoneMicTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+		
+        <activity
+            android:name=".PhoneMicTestActivityForLenovo"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.PhoneMicTestActivityForLenovo"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".GpsTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.GpsTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GpsLocationTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.GpsLocationTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SdCardTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.SdCardTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PowerTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.PowerTestActivity"
+                    android:configChanges="orientation|screenSize|keyboardHidden"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="BrightnessTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BrightnessTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".KeyboardTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".KeyboardHardwareTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardHardwareTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- limi 8.8 -->
+         <activity
+            android:name=".KeyboardUSTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardUSTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".KeyboardUKTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardUKTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".KeyboardTHAITestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardTHAITestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".KeyboardTAITestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardTAITestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".KeyboardRUSTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardRUSTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+          <activity
+            android:name=".KeyboardKORTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardKORTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".KeyboardIDTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardIDTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".KeyboardHEBTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardHEBTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".KeyboardGRKTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardGRKTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".KeyboardARATestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardARATestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".KeyboardTURTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardTURTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardSWITestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardSWITestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardSPATestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardSPATestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardSLETestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardSLETestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardPORTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardPORTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardNODTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardNODTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardLATTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardLATTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardITATestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardITATestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardICETestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardICETestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardHUNTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardHUNTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardGERTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardGERTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardFRENTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardFRENTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardFRATestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardFRATestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardDUTTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardDUTTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardCZTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardCZTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardBULTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardBULTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardBRATestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardBRATestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".KeyboardBELTestActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.KeyboardBELTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--  -->
+        <activity
+            android:name="MrioUSBTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MrioUSBTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SimCardTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.SimCardTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FMRadioTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.FMRadioTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CompassTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.CompassTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HdmiTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.HdmiTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LevelTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.LevelTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="StorageTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.StorageTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UsbHostTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.UsbHostTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HardwareInfoTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.HardwareInfoTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LedTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.LedTestActivity"
+                    android:configChanges="orientation|screenSize|keyboardHidden"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- limi 8.26 -->
+          <activity
+            android:name=".LIDTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.LIDTestActivity"
+                    android:configChanges="orientation|screenSize|keyboardHidden"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- limi 8.26 -->
+        <activity
+            android:name=".TouchPadTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.TouchPadTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TouchPanelTestActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.TouchPanelTestActivity"
+                    android:screenOrientation="landscape" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".InfomationActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+        </activity>
+
+        <receiver android:name=".helper.OneStartReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ****************Stress Test********************* -->
+        <activity
+            android:name=".StressTest.StressTestActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+        </activity>
+
+        <!-- reboot test -->
+        <activity
+            android:name=".StressTest.RebootTest"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+        </activity>
+
+        <receiver android:name=".StressTest.RebootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- reboot test end -->
+
+
+        <!-- sleep test -->
+        <activity
+            android:name=".StressTest.SleepTest"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+        </activity>
+
+        <!-- camera Stress test -->
+        <activity
+            android:name=".StressTest.CameraOpenTest"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+        <activity
+            android:name=".StressTest.CameraAutoTestActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+
+        <service android:name=".StressTest.CameraOpenService" >
+        </service>
+
+        <!-- video test -->
+        <activity
+            android:name=".StressTest.VideoTest"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+        <activity
+            android:name=".StressTest.VideoPlayActivity"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+
+        <!-- compare Server info and local info -->
+        <activity
+            android:name=".CompareServerInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+
+            
+                <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+              <category android:name="android.intent.category.LAUNCHER" />   
+            </intent-filter>
+            
+        </activity>
+        <activity
+            android:name=".StressTest.RunInTest"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true" />
+
+</manifest>

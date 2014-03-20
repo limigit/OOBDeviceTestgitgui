@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/btns"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_Pass"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnPassText" />
+
+        <Button
+            android:id="@+id/btn_Fail"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnFailText" />
+
+        <Button
+            android:id="@+id/btn_Skip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnSkipText" />
+
+        <Button
+            android:id="@+id/btn_Retest"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnRetestText" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/StopVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/stop"
+        android:visibility="gone" />
+
+    <VideoView
+        android:id="@+id/VideoView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/StopVideo"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/RuninTestTitle"
+        android:textSize="24sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/SleepWakeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTitle"
+        android:textSize="55sp" />
+
+    <Spinner
+        android:id="@+id/SleepWakeTimesSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="55sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/SleepWakeText"
+        android:layout_marginTop="10sp" />
+
+    <TextView
+        android:id="@+id/MemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SleepWakeText"
+        android:gravity="center_horizontal"
+        android:textSize="55sp" />
+
+    <Spinner
+        android:id="@+id/MemSizeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="55sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/MemText"
+        android:layout_marginTop="10sp" />
+
+    <TextView
+        android:id="@+id/VideoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/MemText"
+        android:textSize="55sp" />
+
+    <Spinner
+        android:id="@+id/VideoLengthSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="55sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/VideoText"
+        android:layout_marginTop="10sp" />
+
+    <TextView
+        android:id="@+id/BatteryTempText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/VideoText"
+        android:textSize="55sp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btns"
+        android:layout_below="@id/MemText" >
+
+        <TextView
+            android:id="@+id/MemResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/TestStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BatteryTempText" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BatteryTempText"
+        android:visibility="gone" />
+
+</RelativeLayout>

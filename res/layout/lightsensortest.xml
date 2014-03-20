@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/LightsensorTest"
+            android:textSize="30dip" />
+
+        <!-- for Light -->
+
+        <TextView
+            android:id="@+id/Light"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTitle"
+            android:text="@string/Light"
+            android:textSize="25dip" />
+
+        <TextView
+            android:id="@+id/name_lig"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Light"
+            android:textSize="20dip" />
+
+        <TextView
+            android:id="@+id/vendor_lig"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_lig"
+            android:textSize="20dip" />
+
+        <TextView
+            android:id="@+id/version_lig"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vendor_lig"
+            android:textSize="20dip" />
+
+        <TextView
+            android:id="@+id/maxRange_lig"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/version_lig"
+            android:textSize="20dip" />
+
+        <TextView
+            android:id="@+id/resolution_lig"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/maxRange_lig"
+            android:textSize="20dip" />
+
+        <TextView
+            android:id="@+id/power_lig"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resolution_lig"
+            android:textSize="20dip" />
+
+        <TextView
+            android:id="@+id/light"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/power_lig"
+            android:text="@string/lightvalue"
+            android:textSize="20dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_Pass"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnPassText" />
+
+            <Button
+                android:id="@+id/btn_Fail"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnFailText" />
+
+            <Button
+                android:id="@+id/btn_Skip"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnSkipText" />
+
+            <Button
+                android:id="@+id/btn_Retest"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnRetestText" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

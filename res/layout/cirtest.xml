@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout1"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<TextView android:id="@+id/CirTest" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_alignParentTop="true"
+		android:gravity="center_horizontal" android:paddingBottom="20px"
+		android:textSize="24sp" android:visibility="visible" android:text="@string/CirTestTitle" />
+	<TextView android:id="@+id/CirResult" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_below="@id/CirTest"
+		android:gravity="center_horizontal" android:textSize="20sp" />
+	<TextView android:id="@+id/CirSendData" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_below="@id/CirResult"
+		android:gravity="center_horizontal" android:textSize="20sp" />
+
+	<LinearLayout android:id="@+id/cir_btns"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:orientation="horizontal" android:layout_alignParentBottom="true">
+
+		<Button android:id="@+id/btn_Pass" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+
+			android:text="@string/btnPassText" />
+
+		<Button android:id="@+id/btn_Fail" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/btnFailText" />
+		<Button android:id="@+id/btn_Skip" android:layout_width="0dip"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:text="@string/btnSkipText" />
+	</LinearLayout>
+
+
+	<Button android:id="@+id/send" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/CirSend"
+		android:layout_below="@id/CirSendData" />
+
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/ledtesttextinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="30dp" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical" >
+     
+  
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical" >
+            <TextView
+               android:id="@+id/ledtesttext"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="40dp" />
+            <Button
+               android:id="@+id/org_led_light_id"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:clickable="false"
+               android:text="@string/led_light_button_text" />
+             <Button
+               android:id="@+id/blu_led_light_id"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:clickable="false"
+               android:text="@string/led_light_button_text2" />
+        </LinearLayout>
+  
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="left"
+        android:orientation="vertical" >
+         <TextView
+            android:id="@+id/capstesttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:textSize="40dp" />
+        <Button
+            android:id="@+id/caps_light_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:text="@string/caps_light_button_text" />
+       </LinearLayout>
+    </LinearLayout>
+ 
+    <LinearLayout
+        android:id="@+id/led_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_Pass"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnPassText" />
+
+        <Button
+            android:id="@+id/btn_Fail"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnFailText" />
+
+        <Button
+            android:id="@+id/btn_Skip"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnSkipText" />
+	    
+            <Button
+                android:id="@+id/btn_Retest"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btnRetestText" />
+    </LinearLayout>
+
+</LinearLayout>

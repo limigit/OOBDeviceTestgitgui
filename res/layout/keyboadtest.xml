@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/keyboardtest_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="@string/KeyboardTestTitle"
+        android:textSize="24.0sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/keyboardtest_title"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fan"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/l1n2"
+                android:layout_width="70dp"
+                android:layout_height="120dp"
+                android:onClick="onPass"
+                android:src="@drawable/l1n2" />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="120dp"
+                android:src="@drawable/home" />
+
+            <ImageButton
+                android:id="@+id/l1n3"
+                android:layout_width="70dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="100dp"
+                android:onClick="onPass"
+                android:src="@drawable/l1n3" />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="120dp"
+                android:src="@drawable/launcher" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/l1n4"
+                android:layout_width="70dp"
+                android:layout_height="120dp"
+                android:onClick="onPass"
+                android:src="@drawable/l1n4" />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="130dp"
+                android:src="@drawable/settings" />
+
+            <ImageButton
+                android:id="@+id/l1n5"
+                android:layout_width="70dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="100dp"
+                android:onClick="onPass"
+                android:src="@drawable/l1n5" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:src="@drawable/mute1" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:src="@drawable/mute2" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TestBack"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/l1n1"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:onClick="onPass"
+                android:src="@drawable/l1n1" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="@string/backtext"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/l1n11"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="100dp"
+                android:onClick="onPass"
+                android:src="@drawable/l1n11" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="@string/locktext"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/l1n12"
+                android:layout_width="70dp"
+                android:layout_height="120dp"
+                android:onClick="onPass"
+                android:src="@drawable/l1n12" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:src="@drawable/touchpad1" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:src="@drawable/touchpad2" />
+
+            <ImageButton
+                android:id="@+id/l1n13"
+                android:layout_width="70dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="100dp"
+                android:onClick="onPass"
+                android:src="@drawable/l1n13" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:src="@drawable/screenrotate1" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:src="@drawable/screenrotate2" />
+
+            <ImageButton
+                android:id="@+id/l1n14"
+                android:layout_width="70dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="50dp"
+                android:onClick="onPass"
+                android:src="@drawable/l1n14" />
+
+            <ImageView
+                android:layout_width="280dp"
+                android:layout_height="120dp"
+                android:src="@drawable/browser" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fan1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/l4n13"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/l4n13" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/result_bt_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_Pass"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:focusable="true"
+            android:text="@string/btnPassText" />
+
+        <Button
+            android:id="@+id/btn_Fail"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:focusable="true"
+            android:text="@string/btnFailText" />
+
+        <Button
+            android:id="@+id/btn_Skip"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:focusable="true"
+            android:text="@string/btnSkipText" />
+
+        <Button
+            android:id="@+id/btn_Retest"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btnRetestText" />
+    </LinearLayout>
+
+</RelativeLayout>
